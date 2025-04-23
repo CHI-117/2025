@@ -1,25 +1,25 @@
 {{>layouts/header}}
 
 <table class="table">
-<thead>
+    <thead>
 
     <tr>
         <th scope="col">Id</th>
-        <th scope="col">Title</th>
-        <th scope="col">Content</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
     </tr>
     </thead>
     <tbody>
-    {{#articleList}}
-    <tr>
-        <th>{{id}}</th>
-        <td><a href="/articles/{{id}}">{{title}}</a></td>
-        <td>{{content}}</td>
-    </tr>
-    {{/articleList}}
-</tbody>
+    {{#member}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/member/{{id}}">{{email}}</a></td>
+            <td>{{Password}}</td>
+        </tr>
+    {{/member}}
+    </tbody>
 </table>
 
-<a href="/articles/new">New Article</a>
+<a href="/member/new">회원가입</a>
 
 {{>layouts/footer}}
